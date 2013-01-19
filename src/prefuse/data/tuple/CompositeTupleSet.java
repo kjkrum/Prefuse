@@ -213,7 +213,7 @@ public class CompositeTupleSet extends AbstractTupleSet {
         } else {
             int count = 0;
             Iterator it = m_map.entrySet().iterator();
-            for ( int i=0; it.hasNext(); ++i )  {
+            while(it.hasNext()) {
                 Map.Entry entry = (Map.Entry)it.next();
                 TupleSet ts = (TupleSet)entry.getValue();
                 count += ts.getTupleCount();
