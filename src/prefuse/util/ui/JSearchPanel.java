@@ -37,6 +37,8 @@ import prefuse.util.ColorLib;
 public class JSearchPanel extends JPanel
     implements DocumentListener, ActionListener
 {
+	private static final long serialVersionUID = 1L;
+	
     private Object m_lock;
     private SearchTupleSet m_searcher;
 
@@ -480,6 +482,7 @@ public class JSearchPanel extends JPanel
      * and clear the query field.
      */
     public class CancelButton extends JComponent implements MouseListener {
+		private static final long serialVersionUID = 1L;
 
         private boolean hover = false;
         private int[] outline = new int[] {

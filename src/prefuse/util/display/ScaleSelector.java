@@ -20,6 +20,7 @@ import javax.swing.event.ChangeListener;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class ScaleSelector extends JComponent implements ChangeListener {
+	private static final long serialVersionUID = 1L;
 
     private final static int MAX_SIZE = 135;
     
@@ -125,6 +126,8 @@ public class ScaleSelector extends JComponent implements ChangeListener {
      * scale factor.
      */
     public class ImagePanel extends JComponent {
+		private static final long serialVersionUID = 1L;
+		
         Dimension d = new Dimension(MAX_SIZE, MAX_SIZE);
         public ImagePanel() {
             this.setPreferredSize(d);

@@ -44,6 +44,7 @@ import prefuse.visual.sort.ItemSorter;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class DataMountain extends Display {
+	private static final long serialVersionUID = 1L;
     
     public DataMountain(Table t) {
         super(new Visualization());

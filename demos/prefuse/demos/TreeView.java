@@ -67,6 +67,7 @@ import prefuse.visual.sort.TreeDepthItemSorter;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class TreeView extends Display {
+	private static final long serialVersionUID = 1L;
 
     public static final String TREE_CHI = "/chi-ontology.xml.gz";
     
@@ -341,6 +342,8 @@ public class TreeView extends Display {
     // ------------------------------------------------------------------------
    
     public class OrientAction extends AbstractAction {
+		private static final long serialVersionUID = 1L;
+    	
         private int orientation;
         
         public OrientAction(int orientation) {

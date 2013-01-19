@@ -49,6 +49,7 @@ import prefuse.visual.VisualItem;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class GraphView extends JPrefuseApplet {
+	private static final long serialVersionUID = 1L;
 
     private static final String graph = "graph";
     private static final String nodes = "graph.nodes";

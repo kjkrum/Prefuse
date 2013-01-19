@@ -14,6 +14,8 @@ import prefuse.util.ui.ValuedRangeModel;
 public class NumberRangeModel extends DefaultBoundedRangeModel
     implements ValuedRangeModel
 {
+	private static final long serialVersionUID = 1L;
+	
     protected Class m_type;
     protected Number m_min, m_max, m_lo, m_hi;
     

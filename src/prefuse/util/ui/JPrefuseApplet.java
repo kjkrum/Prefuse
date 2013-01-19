@@ -14,6 +14,7 @@ import prefuse.activity.ActivityManager;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class JPrefuseApplet extends JApplet {
+	private static final long serialVersionUID = 1L;
     
     /**
      * Automatically shuts down the ActivityManager when the applet is

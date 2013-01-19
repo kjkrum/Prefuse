@@ -27,6 +27,7 @@ import prefuse.visual.VisualTree;
  * @see javax.swing.JTree
  */
 public class JPrefuseTree extends JTree {
+	private static final long serialVersionUID = 1L;
 
     private Tree m_tree;
     private String m_field;

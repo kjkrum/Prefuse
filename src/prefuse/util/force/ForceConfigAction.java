@@ -17,6 +17,7 @@ import prefuse.util.ui.JForcePanel;
  * @see prefuse.util.ui.JForcePanel
  */
 public class ForceConfigAction extends AbstractAction {
+	private static final long serialVersionUID = 1L;
 
     private JDialog dialog;
     

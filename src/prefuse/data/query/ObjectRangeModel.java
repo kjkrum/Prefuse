@@ -16,6 +16,8 @@ import prefuse.util.ui.ValuedRangeModel;
 public class ObjectRangeModel extends DefaultBoundedRangeModel
     implements ValuedRangeModel
 {
+	private static final long serialVersionUID = 1L;
+	
     private Object[] m_objects;
     private Map m_ordinal;
     

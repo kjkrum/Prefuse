@@ -71,6 +71,7 @@ import prefuse.visual.VisualItem;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class GraphView extends JPanel {
+	private static final long serialVersionUID = 1L;
 
     private static final String graph = "graph";
     private static final String nodes = "graph.nodes";
@@ -283,26 +284,31 @@ public class GraphView extends JPanel {
         JMenu dataMenu = new JMenu("Data");
         dataMenu.add(new OpenGraphAction(view));
         dataMenu.add(new GraphMenuAction("Grid","ctrl 1",view) {
+			private static final long serialVersionUID = 1L;
             protected Graph getGraph() {
                 return GraphLib.getGrid(15,15);
             }
         });
         dataMenu.add(new GraphMenuAction("Clique","ctrl 2",view) {
+			private static final long serialVersionUID = 1L;
             protected Graph getGraph() {
                 return GraphLib.getClique(10);
             }
         });
         dataMenu.add(new GraphMenuAction("Honeycomb","ctrl 3",view) {
+			private static final long serialVersionUID = 1L;
             protected Graph getGraph() {
                 return GraphLib.getHoneycomb(5);
             }
         });
         dataMenu.add(new GraphMenuAction("Balanced Tree","ctrl 4",view) {
+			private static final long serialVersionUID = 1L;
             protected Graph getGraph() {
                 return GraphLib.getBalancedTree(3,5);
             }
         });
         dataMenu.add(new GraphMenuAction("Diamond Tree","ctrl 5",view) {
+			private static final long serialVersionUID = 1L;
             protected Graph getGraph() {
                 return GraphLib.getDiamondTree(3,3,3);
             }
@@ -336,6 +342,7 @@ public class GraphView extends JPanel {
      * Swing menu action that loads a graph into the graph viewer.
      */
     public abstract static class GraphMenuAction extends AbstractAction {
+		private static final long serialVersionUID = 1L;
         private GraphView m_view;
         public GraphMenuAction(String name, String accel, GraphView view) {
             m_view = view;
@@ -350,6 +357,7 @@ public class GraphView extends JPanel {
     }
     
     public static class OpenGraphAction extends AbstractAction {
+		private static final long serialVersionUID = 1L;
         private GraphView m_view;
 
         public OpenGraphAction(GraphView view) {

@@ -5,6 +5,7 @@ package prefuse.data;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class DataReadOnlyException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
 
     /**
      * Create a new DataReadOnlyException.

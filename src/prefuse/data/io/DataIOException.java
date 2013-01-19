@@ -6,6 +6,7 @@ package prefuse.data.io;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class DataIOException extends Exception {
+	private static final long serialVersionUID = 1L;
 
     /**
      * Create a new DataIOException.

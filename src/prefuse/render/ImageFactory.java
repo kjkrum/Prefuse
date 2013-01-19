@@ -37,13 +37,14 @@ public class ImageFactory {
     //a nice LRU cache courtesy of java 1.4
     protected Map imageCache =
         new LinkedHashMap((int) (m_imageCacheSize + 1 / .75F), .75F, true) {
+			private static final long serialVersionUID = 1L;
             public boolean removeEldestEntry(Map.Entry eldest) {
                 return size() > m_imageCacheSize;
             }
         };
     protected Map loadMap = new HashMap(50);
 
-    protected final Component component = new Component() {};
+    protected final Component component = new Component() { private static final long serialVersionUID = 1L; };
     protected final MediaTracker tracker = new MediaTracker(component);
     protected int nextTrackerID = 0;
 

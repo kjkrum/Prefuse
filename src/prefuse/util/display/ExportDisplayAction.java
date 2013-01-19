@@ -24,6 +24,7 @@ import prefuse.util.io.SimpleFileFilter;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class ExportDisplayAction extends AbstractAction {
+	private static final long serialVersionUID = 1L;
 
     private Display display;
     private JFileChooser chooser;

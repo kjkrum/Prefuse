@@ -30,6 +30,7 @@ import prefuse.util.StringLib;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class JValueSlider extends JComponent {
+	private static final long serialVersionUID = 1L;
 
     private Number     m_min, m_max, m_value;
     private boolean    m_ignore = false;
@@ -133,6 +134,7 @@ public class JValueSlider extends JComponent {
             }
         });
         m_field.addActionListener(new AbstractAction() {
+			private static final long serialVersionUID = 1L;
             public void actionPerformed(ActionEvent e) {
                 if ( m_ignore ) return;
                 m_ignore = true;

@@ -51,6 +51,7 @@ import prefuse.visual.VisualItem;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class AggregateDemo extends Display {
+	private static final long serialVersionUID = 1L;
 
     public static final String GRAPH = "graph";
     public static final String NODES = "graph.nodes";

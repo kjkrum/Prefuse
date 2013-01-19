@@ -22,6 +22,7 @@ import prefuse.util.force.ForceSimulator;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class JForcePanel extends JPanel {
+	private static final long serialVersionUID = 1L;
     
     private ForcePanelChangeListener lstnr = new ForcePanelChangeListener();
     private ForceSimulator fsim;

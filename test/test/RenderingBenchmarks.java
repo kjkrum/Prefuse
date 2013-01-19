@@ -22,6 +22,7 @@ import javax.swing.JFrame;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class RenderingBenchmarks extends JComponent {
+	private static final long serialVersionUID = 1L;
 
     private static final Logger s_logger 
         = Logger.getLogger(RenderingBenchmarks.class.getName());

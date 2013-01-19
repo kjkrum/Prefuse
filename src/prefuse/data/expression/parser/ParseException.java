@@ -11,6 +11,7 @@ package prefuse.data.expression.parser;
  * mechanisms so long as you retain the public fields.
  */
 public class ParseException extends RuntimeException {
+	private static final long serialVersionUID = 1L;
 
   /**
    * This constructor is used by the method "generateParseException"

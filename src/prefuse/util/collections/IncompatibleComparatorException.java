@@ -7,6 +7,7 @@ package prefuse.util.collections;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class IncompatibleComparatorException extends Exception {
+	private static final long serialVersionUID = 1L;
 
     /**
      * Create a new IncompatibleComparatorException.

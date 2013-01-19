@@ -19,6 +19,8 @@ import prefuse.util.collections.CopyOnWriteArrayList;
 public class ListModel extends DefaultListSelectionModel
     implements MutableComboBoxModel
 {
+	private static final long serialVersionUID = 1L;
+	
     private ArrayList m_items = new ArrayList();
     private CopyOnWriteArrayList m_lstnrs = new CopyOnWriteArrayList();
     

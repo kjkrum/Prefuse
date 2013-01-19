@@ -103,6 +103,7 @@ import prefuse.visual.sort.ItemSorter;
  * @see prefuse.controls
  */
 public class Display extends JComponent {
+	private static final long serialVersionUID = 1L;
 
     private static final Logger s_logger 
         = Logger.getLogger(Display.class.getName());

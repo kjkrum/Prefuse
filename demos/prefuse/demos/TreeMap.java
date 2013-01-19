@@ -59,6 +59,7 @@ import prefuse.visual.sort.TreeDepthItemSorter;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class TreeMap extends Display {
+	private static final long serialVersionUID = 1L;
 
     public static final String TREE_CHI = "/chi-ontology.xml.gz";
     

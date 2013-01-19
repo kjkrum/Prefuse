@@ -47,6 +47,7 @@ import javax.swing.event.AncestorListener;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class JCustomTooltip extends JToolTip {
+	private static final long serialVersionUID = 1L;
     
     private boolean  m_persist = false;
     private Listener m_lstnr = null;

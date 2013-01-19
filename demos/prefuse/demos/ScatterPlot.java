@@ -36,6 +36,7 @@ import prefuse.visual.expression.VisiblePredicate;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class ScatterPlot extends Display {
+	private static final long serialVersionUID = 1L;
 
     private static final String group = "data";
     

@@ -69,6 +69,7 @@ import prefuse.visual.sort.TreeDepthItemSorter;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class RadialGraphView extends Display {
+	private static final long serialVersionUID = 1L;
 
     public static final String DATA_FILE = "/socialnet.xml";
     

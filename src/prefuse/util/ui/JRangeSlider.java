@@ -34,7 +34,8 @@ import javax.swing.event.ChangeListener;
  */
 public class JRangeSlider extends JComponent 
     implements MouseListener, MouseMotionListener, KeyListener
-{   
+{
+	private static final long serialVersionUID = 1L;
     /*
      * NOTE: This is a modified version of the original class distributed by
      * Ben Bederson, Jesse Grosjean, and Jon Meyer as part of an HCIL Tech

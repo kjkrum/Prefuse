@@ -18,6 +18,7 @@ import javax.swing.JFrame;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class RenderingAccuracy extends JComponent {
+	private static final long serialVersionUID = 1L;
 
     public RenderingAccuracy() {
         setPreferredSize(new Dimension(100,120));

@@ -63,6 +63,7 @@ import prefuse.visual.sort.ItemSorter;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class Congress extends JPanel {
+	private static final long serialVersionUID = 1L;
 
     public static void main(String[] args) {
         UILib.setPlatformLookAndFeel();

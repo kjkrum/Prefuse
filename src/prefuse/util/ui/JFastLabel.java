@@ -18,6 +18,7 @@ import javax.swing.SwingConstants;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class JFastLabel extends JComponent {
+	private static final long serialVersionUID = 1L;
 
     private String m_text;
     private int m_valign = SwingConstants.TOP;

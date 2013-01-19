@@ -50,6 +50,7 @@ import prefuse.util.io.IOLib;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class PrefuseConfig extends Properties {
+	private static final long serialVersionUID = 1L;
 
     private static final Logger s_logger 
         = Logger.getLogger(PrefuseConfig.class.getName());

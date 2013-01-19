@@ -6,6 +6,7 @@ package prefuse.data.parser;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class DataParseException extends Exception {
+	private static final long serialVersionUID = 1L;
 
     /**
      * Create a new DataParseException.

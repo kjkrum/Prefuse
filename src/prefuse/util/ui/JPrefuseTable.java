@@ -16,6 +16,7 @@ import prefuse.visual.VisualTable;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class JPrefuseTable extends JTable {
+	private static final long serialVersionUID = 1L;
 
     private Table m_table;
     private TableCellRenderer m_tcr = new DefaultTableCellRenderer();

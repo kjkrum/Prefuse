@@ -27,6 +27,7 @@ import javax.swing.event.ListSelectionListener;
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class JToggleGroup extends JPanel {
+	private static final long serialVersionUID = 1L;
 
     public static final int CHECKBOX = 0;
     public static final int RADIO    = 1;
