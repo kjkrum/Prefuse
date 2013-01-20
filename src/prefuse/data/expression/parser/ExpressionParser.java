@@ -595,15 +595,15 @@ public class ExpressionParser implements ExpressionParserConstants {
   static final public String Name() throws ParseException {
   Token t;
     t = jj_consume_token(IDENTIFIER);
-                   {if (true) return t.image;}
-    throw new Error("Missing return statement in function");
+                   {/*if (true)*/ return t.image;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public String Quoted() throws ParseException {
   Token t;
     t = jj_consume_token(QUOTED);
-               {if (true) return t.image.substring(1,t.image.length()-1);}
-    throw new Error("Missing return statement in function");
+               {/*if (true)*/ return t.image.substring(1,t.image.length()-1);}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression Parse() throws ParseException {
@@ -626,25 +626,25 @@ public class ExpressionParser implements ExpressionParserConstants {
     case SUB:
       e = Expression();
       jj_consume_token(0);
-                         {if (true) return e;}
-      break;
+                         {/*if (true)*/ return e;}
+      //break;
     case 0:
       jj_consume_token(0);
-          {if (true) throw new ParseException("No expression provided");}
-      break;
+          {/*if (true)*/ throw new ParseException("No expression provided");}
+      //break;
     default:
       jj_la1[0] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
-    throw new Error("Missing return statement in function");
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression Expression() throws ParseException {
   Expression e;
     e = OrExpression();
-                     {if (true) return e;}
-    throw new Error("Missing return statement in function");
+                     {/*if (true)*/ return e;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression OrExpression() throws ParseException {
@@ -668,8 +668,8 @@ public class ExpressionParser implements ExpressionParserConstants {
           l = new OrPredicate((Predicate)l,(Predicate)r);
       }
     }
-       {if (true) return l;}
-    throw new Error("Missing return statement in function");
+       {/*if (true)*/ return l;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression XorExpression() throws ParseException {
@@ -693,8 +693,8 @@ public class ExpressionParser implements ExpressionParserConstants {
           l = new XorPredicate((Predicate)l,(Predicate)r);
       }
     }
-       {if (true) return l;}
-    throw new Error("Missing return statement in function");
+       {/*if (true)*/ return l;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression AndExpression() throws ParseException {
@@ -718,8 +718,8 @@ public class ExpressionParser implements ExpressionParserConstants {
           l = new AndPredicate((Predicate)l,(Predicate)r);
       }
     }
-       {if (true) return l;}
-    throw new Error("Missing return statement in function");
+       {/*if (true)*/ return l;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression EqualityExpression() throws ParseException {
@@ -752,8 +752,8 @@ public class ExpressionParser implements ExpressionParserConstants {
       op = (t.kind==EQ ? ComparisonPredicate.EQ : ComparisonPredicate.NEQ);
       l = new ComparisonPredicate(op, l, r);
     }
-           {if (true) return l;}
-    throw new Error("Missing return statement in function");
+           {/*if (true)*/ return l;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression RelationalExpression() throws ParseException {
@@ -807,8 +807,8 @@ public class ExpressionParser implements ExpressionParserConstants {
       }
       l = new ComparisonPredicate(op, l, r);
     }
-           {if (true) return l;}
-    throw new Error("Missing return statement in function");
+           {/*if (true)*/ return l;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression AdditiveExpression() throws ParseException {
@@ -855,8 +855,8 @@ public class ExpressionParser implements ExpressionParserConstants {
       }
       l = new ArithmeticExpression(op, l, r);
     }
-           {if (true) return l;}
-    throw new Error("Missing return statement in function");
+           {/*if (true)*/ return l;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression MultiplicativeExpression() throws ParseException {
@@ -903,8 +903,8 @@ public class ExpressionParser implements ExpressionParserConstants {
       }
       l = new ArithmeticExpression(op, l, r);
     }
-           {if (true) return l;}
-    throw new Error("Missing return statement in function");
+           {/*if (true)*/ return l;}
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression UnaryExpression() throws ParseException {
@@ -928,28 +928,28 @@ public class ExpressionParser implements ExpressionParserConstants {
         if ( t.kind == SUB  && e instanceof NumericLiteral ) {
           Number n = (Number)e.get(null);
           if ( n instanceof Integer ) {
-              {if (true) return new NumericLiteral(-1*n.intValue());}
+              {/*if (true)*/ return new NumericLiteral(-1*n.intValue());}
           } if ( n instanceof Double ) {
-              {if (true) return new NumericLiteral(-1*n.doubleValue());}
+              {/*if (true)*/ return new NumericLiteral(-1*n.doubleValue());}
           } if ( n instanceof Long ) {
-              {if (true) return new NumericLiteral(-1*n.longValue());}
+              {/*if (true)*/ return new NumericLiteral(-1*n.longValue());}
           } if ( n instanceof Float ) {
-              {if (true) return new NumericLiteral(-1*n.floatValue());}
+              {/*if (true)*/ return new NumericLiteral(-1*n.floatValue());}
           } else {
-              {if (true) return new ArithmeticExpression(ArithmeticExpression.MUL,
+              {/*if (true)*/ return new ArithmeticExpression(ArithmeticExpression.MUL,
                                               new NumericLiteral(-1), e);}
           }
         } else if ( t.kind == SUB ) {
-          {if (true) return new ArithmeticExpression(ArithmeticExpression.MUL,
+          {/*if (true)*/ return new ArithmeticExpression(ArithmeticExpression.MUL,
                                           new NumericLiteral(-1), e);}
         } else {
-          {if (true) return e;}
+          {/*if (true)*/ return e;}
         }
-      break;
+      //break;
     case NOT:
       e = UnaryExpressionNotPlusMinus();
-                                      {if (true) return e;}
-      break;
+                                      {/*if (true)*/ return e;}
+      //break;
     case TRUE:
     case FALSE:
     case NULL:
@@ -963,14 +963,14 @@ public class ExpressionParser implements ExpressionParserConstants {
     case IDENTIFIER:
     case LPAREN:
       e = PrimaryExpression();
-                            {if (true) return e;}
-      break;
+                            {/*if (true)*/ return e;}
+      //break;
     default:
       jj_la1[13] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
-    throw new Error("Missing return statement in function");
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression UnaryExpressionNotPlusMinus() throws ParseException {
@@ -978,15 +978,15 @@ public class ExpressionParser implements ExpressionParserConstants {
     jj_consume_token(NOT);
     e = UnaryExpression();
         if ( e instanceof NotPredicate ) {
-            {if (true) return ((NotPredicate)e).getPredicate();}
+            {/*if (true)*/ return ((NotPredicate)e).getPredicate();}
         } else {
             if ( !(e instanceof Predicate) ) {
-                {if (true) throw new ParseException("Can't negate a non-predicate");}
+                {/*if (true)*/ throw new ParseException("Can't negate a non-predicate");}
             } else {
-                {if (true) return new NotPredicate((Predicate)e);}
+                {/*if (true)*/ return new NotPredicate((Predicate)e);}
             }
         }
-    throw new Error("Missing return statement in function");
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression PrimaryExpression() throws ParseException {
@@ -1001,29 +1001,29 @@ public class ExpressionParser implements ExpressionParserConstants {
     case FLOAT:
     case STRING:
       e = Literal();
-                  {if (true) return e;}
-      break;
+                  {/*if (true)*/ return e;}
+      //break;
     case IF:
       e = IfStatement();
-                      {if (true) return e;}
-      break;
+                      {/*if (true)*/ return e;}
+      //break;
     case QUOTED:
     case IDENTIFIER:
       e = Identifier();
-                     {if (true) return e;}
-      break;
+                     {/*if (true)*/ return e;}
+      //break;
     case LPAREN:
       jj_consume_token(LPAREN);
       e = Expression();
       jj_consume_token(RPAREN);
-                                       {if (true) return e;}
-      break;
+                                       {/*if (true)*/ return e;}
+      //break;
     default:
       jj_la1[14] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
-    throw new Error("Missing return statement in function");
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression Literal() throws ParseException {
@@ -1031,43 +1031,43 @@ public class ExpressionParser implements ExpressionParserConstants {
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
     case INT:
       t = jj_consume_token(INT);
-              {if (true) return new NumericLiteral(Integer.parseInt(t.image));}
-      break;
+              {/*if (true)*/ return new NumericLiteral(Integer.parseInt(t.image));}
+      //break;
     case LONG:
       t = jj_consume_token(LONG);
-               {if (true) return new NumericLiteral(Long.parseLong(t.image.substring(0,t.image.length()-1)));}
-      break;
+               {/*if (true)*/ return new NumericLiteral(Long.parseLong(t.image.substring(0,t.image.length()-1)));}
+      //break;
     case FLOAT:
       t = jj_consume_token(FLOAT);
-                {if (true) return new NumericLiteral(Float.parseFloat(t.image));}
-      break;
+                {/*if (true)*/ return new NumericLiteral(Float.parseFloat(t.image));}
+      //break;
     case DOUBLE:
       t = jj_consume_token(DOUBLE);
-                 {if (true) return new NumericLiteral(Double.parseDouble(t.image));}
-      break;
+                 {/*if (true)*/ return new NumericLiteral(Double.parseDouble(t.image));}
+      //break;
     case STRING:
       t = jj_consume_token(STRING);
                 String s = unescape(t.image.substring(1, t.image.length()-1));
-                {if (true) return new ObjectLiteral(s);}
-      break;
+                {/*if (true)*/ return new ObjectLiteral(s);}
+      //break;
     case TRUE:
       jj_consume_token(TRUE);
-             {if (true) return new BooleanLiteral(true);}
-      break;
+             {/*if (true)*/ return new BooleanLiteral(true);}
+      //break;
     case FALSE:
       jj_consume_token(FALSE);
-              {if (true) return new BooleanLiteral(false);}
-      break;
+              {/*if (true)*/ return new BooleanLiteral(false);}
+      //break;
     case NULL:
       jj_consume_token(NULL);
-             {if (true) return new ObjectLiteral(null);}
-      break;
+             {/*if (true)*/ return new ObjectLiteral(null);}
+      //break;
     default:
       jj_la1[15] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
-    throw new Error("Missing return statement in function");
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression Identifier() throws ParseException {
@@ -1075,8 +1075,8 @@ public class ExpressionParser implements ExpressionParserConstants {
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
     case QUOTED:
       s = Quoted();
-                 {if (true) return new ColumnExpression(s);}
-      break;
+                 {/*if (true)*/ return new ColumnExpression(s);}
+      //break;
     case IDENTIFIER:
       s = Name();
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
@@ -1126,14 +1126,14 @@ public class ExpressionParser implements ExpressionParserConstants {
         jj_la1[18] = jj_gen;
         ;
       }
-      {if (true) return f==null ? new ColumnExpression(s) : (Expression)f;}
-      break;
+      {/*if (true)*/ return f==null ? new ColumnExpression(s) : (Expression)f;}
+      //break;
     default:
       jj_la1[19] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
-    throw new Error("Missing return statement in function");
+    //throw new Error("Missing return statement in function");
   }
 
   static final public Expression IfStatement() throws ParseException {
@@ -1145,9 +1145,9 @@ public class ExpressionParser implements ExpressionParserConstants {
     jj_consume_token(ELSE);
     e = Expression();
       if ( !(p instanceof Predicate) )
-          {if (true) throw new ParseException("IF-statement test must be a predicate");}
-      {if (true) return new IfExpression((Predicate)p, t, e);}
-    throw new Error("Missing return statement in function");
+          {/*if (true)*/ throw new ParseException("IF-statement test must be a predicate");}
+      {/*if (true)*/ return new IfExpression((Predicate)p, t, e);}
+    //throw new Error("Missing return statement in function");
   }
 
   static private boolean jj_initialized_once = false;
