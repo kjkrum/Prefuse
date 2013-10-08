@@ -5,6 +5,8 @@
 	<artifactId>Prefuse</artifactId>
 	<version>20130119</version>
 	<name>Prefuse</name>
+	<description>A Mavenized fork of the Prefuse data visualization toolkit</description>
+	<url>https://github.com/kjkrum/Prefuse</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -22,22 +24,34 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<testSourceDirectory>test</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
 				<configuration>
 					<source>1.4</source>
 					<target>1.4</target>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
-			</plugin>
+			</plugin> -->
 		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh</artifactId>
+				<version>2.4</version>
+			</extension>
+		</extensions>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>chalcodes</id>
+			<url>${chalcodes.url}</url>
+		</repository>
+	</distributionManagement>
 </project>
